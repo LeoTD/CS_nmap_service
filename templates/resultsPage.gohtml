@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+<h1>Hostname: {{ .Hostname }}</h1>
+<h4> Open ports:</h4>
+{{ range .Open_ports }}
+    <li>{{ .ID }}</li>
+{{end}}
+
+<h4>Scanned at: {{ .Timestamp.Format "Jan _2 15:04:05" }}</h4>
+
+
